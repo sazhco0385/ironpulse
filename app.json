@@ -1,0 +1,105 @@
+{
+  "expo": {
+    "name": "IronPulse – Muskelaufbau",
+    "slug": "fitness-app",
+    "owner": "sazhco",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "ironpulse",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/images/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0d0d0f"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.ironpulse.fitnesstracker",
+      "buildNumber": "1",
+      "infoPlist": {
+        "NSHealthShareUsageDescription": "IronPulse liest deine Gesundheitsdaten um deine Fortschritte zu vergleichen.",
+        "NSHealthUpdateUsageDescription": "IronPulse schreibt deine Trainings und dein Körpergewicht in Apple Health."
+      },
+      "entitlements": {
+        "com.apple.developer.healthkit": true,
+        "com.apple.developer.healthkit.background-delivery": true
+      }
+    },
+    "android": {
+      "package": "com.ironpulse.fitnesstracker",
+      "versionCode": 1,
+      "backgroundColor": "#0d0d0f",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#0d0d0f"
+      },
+      "navigationBar": {
+        "backgroundColor": "#0d0d0f",
+        "barStyle": "light-content"
+      },
+      "permissions": [
+        "android.permission.VIBRATE",
+        "android.permission.INTERNET",
+        "android.permission.health.READ_EXERCISE",
+        "android.permission.health.WRITE_EXERCISE",
+        "android.permission.health.READ_BODY_MASS",
+        "android.permission.health.WRITE_BODY_MASS",
+        "android.permission.health.READ_HEART_RATE",
+        "android.permission.health.WRITE_HEART_RATE"
+      ],
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "autoVerify": true,
+          "data": [
+            {
+              "scheme": "ironpulse"
+            }
+          ],
+          "category": [
+            "BROWSABLE",
+            "DEFAULT"
+          ]
+        },
+        {
+          "action": "android.intent.action.VIEW",
+          "category": [
+            "android.intent.category.DEFAULT"
+          ],
+          "data": [
+            {
+              "scheme": "https",
+              "host": "health.google.com",
+              "pathPrefix": "/health-connect"
+            }
+          ]
+        }
+      ]
+    },
+    "web": {
+      "favicon": "./assets/images/icon.png"
+    },
+    "plugins": [
+      [
+        "expo-router",
+        {
+          "origin": "https://replit.com/"
+        }
+      ],
+      "expo-font",
+      "expo-web-browser",
+      "react-native-health-connect"
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "e1bb7cb8-050b-4f4c-abec-5998640bd567"
+      }
+    }
+  }
+}
