@@ -28,5 +28,12 @@ jobs:
       - name: Test Metro bundle (Android)
         run: npx expo export --platform android --output-dir /tmp/bundle-test 2>&1 || true
 
+      - name: Prebuild Android (debug only)
+        run: |
+          npx expo prebuild --platform android --clean 2>&1 | tail -20 || true
+          ls android/ 2>/dev/null | head -5 || echo "No android folder"
+          cat android/build.gradle 2>/dev/null | grep -E "classpath|kotlin|gradle" | head -10 || true
+          cat android/gradle/wrapper/gradle-wrapper.properties 2>/dev/null || true
+
       - name: Build APK
         run: eas build --platform android --profile preview --non-interactive
