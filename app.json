@@ -17,15 +17,7 @@
     "ios": {
       "supportsTablet": false,
       "bundleIdentifier": "com.ironpulse.fitnesstracker",
-      "buildNumber": "1",
-      "infoPlist": {
-        "NSHealthShareUsageDescription": "IronPulse liest deine Gesundheitsdaten um deine Fortschritte zu vergleichen.",
-        "NSHealthUpdateUsageDescription": "IronPulse schreibt deine Trainings und dein Körpergewicht in Apple Health."
-      },
-      "entitlements": {
-        "com.apple.developer.healthkit": true,
-        "com.apple.developer.healthkit.background-delivery": true
-      }
+      "buildNumber": "1"
     },
     "android": {
       "package": "com.ironpulse.fitnesstracker",
