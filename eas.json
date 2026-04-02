@@ -18,6 +18,9 @@
       },
       "ios": {
         "resourceClass": "m-medium"
+      },
+      "env": {
+        "EXPO_PUBLIC_DOMAIN": "5a11ed9d-e7e6-4e60-89c6-7f7e31d5f819-00-1npfe4x4t8bwm.janeway.replit.dev"
       }
     },
     "production": {
@@ -27,6 +30,9 @@
       },
       "ios": {
         "resourceClass": "m-medium"
+      },
+      "env": {
+        "EXPO_PUBLIC_DOMAIN": "5a11ed9d-e7e6-4e60-89c6-7f7e31d5f819-00-1npfe4x4t8bwm.janeway.replit.dev"
       }
     }
   },
