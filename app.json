@@ -41,13 +41,7 @@
       },
       "permissions": [
         "android.permission.VIBRATE",
-        "android.permission.INTERNET",
-        "android.permission.health.READ_EXERCISE",
-        "android.permission.health.WRITE_EXERCISE",
-        "android.permission.health.READ_BODY_MASS",
-        "android.permission.health.WRITE_BODY_MASS",
-        "android.permission.health.READ_HEART_RATE",
-        "android.permission.health.WRITE_HEART_RATE"
+        "android.permission.INTERNET"
       ],
       "intentFilters": [
         {
@@ -61,19 +55,6 @@
           "category": [
             "BROWSABLE",
             "DEFAULT"
-          ]
-        },
-        {
-          "action": "android.intent.action.VIEW",
-          "category": [
-            "android.intent.category.DEFAULT"
-          ],
-          "data": [
-            {
-              "scheme": "https",
-              "host": "health.google.com",
-              "pathPrefix": "/health-connect"
-            }
           ]
         }
       ]
@@ -89,8 +70,7 @@
         }
       ],
       "expo-font",
-      "expo-web-browser",
-      "react-native-health-connect"
+      "expo-web-browser"
     ],
     "experiments": {
       "typedRoutes": true,
