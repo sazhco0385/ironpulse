@@ -58,7 +58,6 @@
     "expo-file-system": "~18.1.11",
     "expo-navigation-bar": "^5.0.10",
     "expo-secure-store": "^15.0.8",
-    "react-native-health": "^1.19.0",
     "react-native-health-connect": "^3.5.0"
   }
 }
